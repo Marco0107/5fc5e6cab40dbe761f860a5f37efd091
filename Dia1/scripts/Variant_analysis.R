@@ -1,7 +1,7 @@
 library(data.table)
 library(dplyr)
 library(tibble)
-setwd('~/ligandoma/LBB/')
+setwd('~/LBB/')
 
 # Importar as variantes preditas
 vcf <- fread(cmd = "grep -v '##' results/amostra-lbb.HaplotypeCaller.filtered.vcf")

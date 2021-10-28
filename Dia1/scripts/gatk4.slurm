@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=GATK4_DNA
-#SBATCH --output=GATK4_DNA.%j
-#SBATCH --ntasks=36
 
 ## Pre-processing workflow based on GATK4 IARC pipeline
 ## https://github.com/IARCbioinfo/gatk4-DataPreProcessing-nf
@@ -10,11 +7,11 @@ module load tools/gatk/gatk-4.1.2.0
 module load tools/picard/2.18.5
 module load tools/samtools/samtools-1.8
 module load tools/bwa/bwa-0.7.17
-qualimap=/home/marcopretti/ligandoma/bin/qualimap_v2.2.1/qualimap
+qualimap=/home/marcopretti/bin/qualimap_v2.2.1/qualimap
 
-INPUTDIR=/home/marcopretti/ligandoma/LBB/data
-OUTDIR=/home/marcopretti/ligandoma/LBB/results
-BINDIR=/home/marcopretti/tcr_reactivity/Curie/bin_curie
+INPUTDIR=/home/marcopretti/LBB/data
+OUTDIR=/home/marcopretti/LBB/results
+BINDIR=/home/marcopretti/bin
 sampleID='amostra-lbb'
 hgversion=hg38
 
@@ -23,7 +20,7 @@ input2=$INPUTDIR/$sampleID'_R2.fq.gz'
 TMPDIR=$OUTDIR/tmpdir.${SLURM_JOB_ID}
 
 ## databases and references
-database=/data04/databases/sources/Broad_bundle/hg38bundle
+database=/Broad_bundle/hg38bundle
 reference=$INPUTDIR/grch38.chr22.fasta
 ref_dbsnp=$database/dbsnp_146.hg38.vcf.gz
 ref_1kg=$database/1000G_phase1.snps.high_confidence.hg38.vcf.gz

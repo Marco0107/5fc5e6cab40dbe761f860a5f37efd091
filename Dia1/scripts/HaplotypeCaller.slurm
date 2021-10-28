@@ -5,13 +5,13 @@
 
 module load tools/gatk/gatk-4.1.2.0
 
-INPUTDIR=/home/marcopretti/ligandoma/LBB/results
+INPUTDIR=/home/marcopretti/LBB/results
 OUTDIR=$INPUTDIR
 sampleID='amostra-lbb'
 BAM=$INPUTDIR/$sampleID'_hg38.recal.bam'
 
 # databases and references
-reference=/home/marcopretti/ligandoma/LBB/data/grch38.chr22.fasta
+reference=/home/marcopretti/LBB/data/grch38.chr22.fasta
 
 # Create dictionnary for reference
 gatk CreateSequenceDictionary -R $reference
