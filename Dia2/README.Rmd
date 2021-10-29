@@ -1,6 +1,6 @@
 ---
 title: "README"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
@@ -18,8 +18,8 @@ setwd('~/Downloads/5fc5e6cab40dbe761f860a5f37efd091/Dia2/')
 *Qualquer métrica do software de escolha poderá ser utilizada. Discorra sobre a métrica utilizada. Mandar o vcf filtrado*
 
 ```{r}
-vcf_PASS <- fread('not_used_Dia2/amostra-lbb.HaplotypeCaller.PASS.vcf.gz')
-vcf_PASS_bed <- fread('not_used_Dia2/amostra-lbb.HaplotypeCaller.PASS.InBED.vcf.gz')
+vcf_PASS <- fread('../not_used_Dia2/amostra-lbb.HaplotypeCaller.PASS.vcf.gz')
+vcf_PASS_bed <- fread('../not_used_Dia2/amostra-lbb.HaplotypeCaller.PASS.InBED.vcf.gz')
 colnames(vcf_PASS_bed) = colnames(vcf_PASS)
 ```
 
